@@ -1,0 +1,21 @@
+{
+  "name": "backend_prepproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/group2LTUC2/BackEnd_prepProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/group2LTUC2/BackEnd_prepProject/issues"
+  },
+  "homepage": "https://github.com/group2LTUC2/BackEnd_prepProject#readme"
+}
