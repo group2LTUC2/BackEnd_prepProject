@@ -1,7 +1,7 @@
 'use strict'
 
 const express = require('express');
-const axios = require("axios");
+const axios = require('axios');
 const cors = require('cors');
 const pg = require('pg');
 require('dotenv').config();
@@ -20,7 +20,7 @@ server.get('/', formDonationHandler);  // Home page
 
 server.get('/donations', donationsHandler);  // donation page ---> show all 
 
-
+server.put('/donations/:id',updateDonations);
 server.get('*', notFoundHandler);
 server.use(errorHandler);
 
@@ -42,7 +42,21 @@ function donationsHandler(req, res){
 
 
 
-
+function updateDonations(req,res){
+    const id = req.params.id;
+    console.log(id);
+    console.log(req.body);
+    // const r=req.body;
+    const sql = `UPDATE donationCard SET fullName=$1,phonNumber=$2,item=$3,quantity=$4,locationOf=$5,img=$6 WHERE id=${id} RETURNING *`;
+    const values =[r.phonNumber,r.item,r.quantity,r.locationOf,r.img,req.body.fullName];
+    client.query(sql,values)
+    .then((data)=>{
+        res.status(200).send(data.rows);
+    })
+    .catch((err)=>{
+        errorHandler(err,req,res);
+    })
+}
 function notFoundHandler(req, res) {
     res.status(404).send("Page not found");
 }
