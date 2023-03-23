@@ -43,6 +43,18 @@ function donationsHandler(req, res){
 
 
 
+function notFoundHandler(req, res) {
+    res.status(404).send("Page not found");
+}
+
+function errorHandler(error, req, res) {
+    const err = {
+        status: 500,
+        message: error
+    }
+    res.status(500).send(err);
+}
+
 Client.connect().then(() => {
     server.listen(PORT, () => {
         console.log(`listening on ${PORT}`);
