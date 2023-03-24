@@ -1,0 +1,52 @@
+{
+  "donations": [
+    {
+      "fullName": "Sarah Abdullah",
+      "phoneNumber": "555-555-5555",
+      "item": "Canned food",
+      "quantity": 7,
+      "locationOfDonor": "Riyadh, Saudi Arabia",
+      "img": "https://example.com/image4.jpg"
+    },
+    {
+      "fullName": "Aisha Khan",
+      "phoneNumber": "222-222-2222",
+      "item": "Cooking oil",
+      "quantity": 2,
+      "locationOfDonor": "Lahore, Pakistan",
+      "img": "https://example.com/image5.jpg"
+    },
+    {
+      "fullName": "Mohamed Salah",
+      "phoneNumber": "999-999-9999",
+      "item": "Sugar",
+      "quantity": 4,
+      "locationOfDonor": "Cairo, Egypt",
+      "img": "https://example.com/image6.jpg"
+    },
+    {
+      "fullName": "Ahmed Ali",
+      "phoneNumber": "123-456-7890",
+      "item": "Tea",
+      "quantity": 8,
+      "locationOfDonor": "Doha, Qatar",
+      "img": "https://example.com/image7.jpg"
+    },
+    {
+      "fullName": "Fatima Ahmed",
+      "phoneNumber": "987-654-3210",
+      "item": "Pasta",
+      "quantity": 3,
+      "locationOfDonor": "Jeddah, Saudi Arabia",
+      "img": "https://example.com/image8.jpg"
+    },
+    {
+      "fullName": "Mohammed Hassan",
+      "phoneNumber": "111-222-3333",
+      "item": "Beans",
+      "quantity": 6,
+      "locationOfDonor": "Abu Dhabi, UAE",
+      "img": "https://example.com/image9.jpg"
+    }
+  ]
+}
