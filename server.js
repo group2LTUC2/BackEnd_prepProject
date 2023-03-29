@@ -49,7 +49,7 @@ function addHandler(req, res) {
     cadres.phonNumber,
     cadres.item,
     cadres.quantity,
-    cadres.locationOf,
+    cadres.locationof,
     cadres.img
   ];
   client.query(sql, values)
@@ -73,7 +73,7 @@ function addHandler(req, res) {
 function updateDonationHandler(req, res) {//in donation page
   const id = req.params.id;
   const donate = req.body;
-  const sql = `UPDATE donationCard SET fullName='${donate.quantity}' WHERE id= ${id} RETURNING *;`;
+  const sql = `UPDATE donationCard SET quantity='${donate.quantity}' WHERE donationCard_id= ${id} RETURNING *;`;
   client.query(sql)
     .then((data) => {
       const sql = `SELECT * FROM donationCard`;
@@ -93,7 +93,7 @@ function updateDonationHandler(req, res) {//in donation page
 //Ahmad
 function deleteDonationCardHandler(req, res) {// in Donation Page
   const id = req.params.id;
-  const sql = `DELETE FROM donationCard WHERE id=${id} RETURNING *;`;
+  const sql = `DELETE FROM donationCard WHERE donationCard_id=${id} RETURNING *;`;
   client.query(sql)
     .then((data) => {
       // res.send(data.rows);
@@ -169,7 +169,7 @@ function getdashboardHandler(req, res) {
       errorHandler(error, req, res);
     })
 
-}
+} 
 function addUserHandler(req, res) {
   const cadres = req.body;
   let sql = `INSERT INTO users(username,email,img) VALUES ('${cadres.username}','${cadres.email}','${cadres.img}') RETURNING *;`;
@@ -200,7 +200,7 @@ function addVolunteerHandler(req, res) {
   const volunteers = req.body;
   const sql = `INSERT INTO volunteers (fullName,phonNumber,img,locationOf) VALUES($1,$2,$3,$4) RETURNING *`;
 
-  const values = [volunteers.fullName, volunteers.phonNumber, volunteers.img, volunteers.locationOf];
+  const values = [volunteers.fullName, volunteers.phonnumber, volunteers.img, volunteers.locationof];
 
   client.query(sql, values)
     .then((result) => {
