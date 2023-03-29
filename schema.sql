@@ -1,4 +1,4 @@
--- DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS donationCard;
 DROP TABLE IF EXISTS volunteers;
 DROP TABLE IF EXISTS takenDonations;
