@@ -1,6 +1,6 @@
 # Sadaqah Box
 
-## Project Idea
+# Project Idea
 Our web app, named "SadaqahBox", aims to tackle two significant issues during the holy month of Ramadan: food waste and hunger. The project will provide a platform for people to donate food to those in need, reducing food waste and ensuring that everyone has access to nutritious meals during Ramadan.
 
 
